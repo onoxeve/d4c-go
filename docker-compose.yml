@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    command: go run server.go
+    ports:
+    - 1323:1323
+    volumes:
+    - .:/go/src/app
+    tty: true
